@@ -7,6 +7,8 @@ const finishedGameUnderstood = document.getElementById("finished-game-understood
 
 const leftPulse = document.getElementById("left-pulse");
 const rightPulse = document.getElementById("right-pulse");
+const downPulse = document.getElementById("down-pulse");
+const upPulse = document.getElementById("up-pulse");
 const shotPulse = document.getElementById("shot-pulse");
 
 const pulses = {};
@@ -34,6 +36,8 @@ function bindTouchControl(element, code) {
 
 bindTouchControl(leftPulse, "KeyA");
 bindTouchControl(rightPulse, "KeyD");
+bindTouchControl(downPulse, "KeyS");
+bindTouchControl(upPulse, "KeyW");
 bindTouchControl(shotPulse, "Space");
 
 
