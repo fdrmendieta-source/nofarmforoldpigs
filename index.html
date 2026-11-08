@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>No Farm For Old Pigs</title>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div id="game">
+
+            <div id="title"><h1>No Farm For Old Pigs</h1></div>
+
+            <div id="environment">
+                <p id="points-container">Points: <span id="points-displayer">0</span>/100</p>
+            </div>
+
+            <div id="footer">
+                <p>Move: WASD | Shoot: Space | Pause: P</p>
+                <button id="start-pulse">START</button>
+            </div>
+
+        </div>
+
+        <dialog closedby="none" id="finished-game-dialog">
+            <p id="finished-game-words"></p>
+            <button id="finished-game-understood">I understand</button>
+        </dialog>
+
+    </main>
+
+    <script src="js/auxiliary.js" defer></script>
+    <script src="js/pig.js" defer></script>
+    <script src="js/enemies.js" defer></script>
+    <script src="js/bonus.js" defer></script>
+    <script src="js/interactions.js" defer></script>
+    <script src="js/state.js" defer></script>
+    <script src="js/loop.js" defer></script>
+
+</body>
+
+</html>

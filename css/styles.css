@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'PressStart2P-Regular';
+    src: url('ps2p.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    font-family: 'PressStart2P-Regular', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 0.5rem;
+    image-rendering: pixelated;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#game {
+
+    width: 400px;
+    height: 600px;
+    box-shadow: 0 0 5px white inset;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+#title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 0.75rem;
+}
+
+#environment {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+#points-container {
+    position: absolute;
+    inset: 0.5rem;
+}
+
+#footer {
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+}
+
+dialog {
+    background-color: black;
+    color: white;
+    border: 5px solid white;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 5rem;
+    font-size: 1rem;
+}
+dialog p {
+    margin-bottom: 1rem;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ----------- ENTITIES ----------- */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(4);
+    }
+}
+
+#pig, .farmer, .butcher, .knife, .shot, .nova, .bonus, .dog {
+    position: absolute;
+}
+
+#pig img {
+    width: 32px;
+    height: auto;
+}
+
+.shot {
+    animation: rotate 1s linear infinite;
+}
+
+.shot img {
+    width: 16px;
+    height: auto;
+}
+
+.farmer img {
+    width: 32px;
+    height: auto;
+}
+
+.butcher img {
+    width: 48px;
+    height: auto;
+}
+
+.knife {
+    animation: rotate 1s linear infinite;
+}
+
+.knife img {
+    width: 16px;
+    height: auto;
+}
+
+.nova {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: grow 100ms linear forwards;
+}
+
+.bonus {
+    box-shadow: 0 0 5px white;
+    border-radius: 50%;
+    animation: rotate 1500ms linear infinite;
+    padding: 2px;
+}
+.bonus img {
+    width: 16px;
+    height: auto;
+}
+
+.dog img {
+    width: 32px;
+    height: auto;
+}
