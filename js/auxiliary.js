@@ -5,9 +5,36 @@ const finishedGameDialog = document.getElementById("finished-game-dialog");
 const finishedGameWords = document.getElementById("finished-game-words");
 const finishedGameUnderstood = document.getElementById("finished-game-understood");
 
+const leftPulse = document.getElementById("left-pulse");
+const rightPulse = document.getElementById("right-pulse");
+const shotPulse = document.getElementById("shot-pulse");
+
 const pulses = {};
 document.addEventListener("keydown", e => { pulses[e.code] = true; });
 document.addEventListener("keyup", e => { pulses[e.code] = false; });
+
+function bindTouchControl(element, code) {
+
+    if (!element) return;
+
+    element.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
+        pulses[code] = true;
+    });
+
+    element.addEventListener("pointerup", (e) => {
+        e.preventDefault();
+        pulses[code] = false;
+    });
+
+    element.addEventListener("pointercancel", () => { pulses[code] = false; });
+    element.addEventListener("pointerleave", () => { pulses[code] = false; });
+
+}
+
+bindTouchControl(leftPulse, "KeyA");
+bindTouchControl(rightPulse, "KeyD");
+bindTouchControl(shotPulse, "Space");
 
 
 function areColliding(element1, element2) {

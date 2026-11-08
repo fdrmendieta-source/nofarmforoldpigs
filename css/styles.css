@@ -69,6 +69,10 @@ main {
     padding: 0.75rem;
 }
 
+#controls-mobile {
+    display: none;
+}
+
 dialog {
     background-color: black;
     color: white;
@@ -164,4 +168,30 @@ dialog::backdrop {
 .dog img {
     width: 32px;
     height: auto;
+}
+
+/* ------------------------- MOBILE -------------------------- */
+
+@media screen and (max-width: 480px) {
+
+    #game {
+        width: 300px;
+        height: 700px;
+    }
+
+    #controls-desktop {
+        display: none;
+    }
+
+    #controls-mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    dialog {
+        width: 100%;
+        padding: 1rem;
+    }
+
 }
