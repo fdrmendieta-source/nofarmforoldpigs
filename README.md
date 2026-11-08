@@ -1,2 +1,2 @@
-# nofarmforoldpigs
-Desktop mini game
+# no Farm For Old Pigs
+Desktop mini game. Retro shooter.
