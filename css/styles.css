@@ -176,15 +176,16 @@ dialog::backdrop {
 
     #main {
         width: 100vw;
-        height: 100svh;
+        min-height: 100svh;
     }
 
-    #game {
+    #game {  
         width: 100%;
         height: 100svh;
     }
 
     #title {
+        height: 10svh;
         font-size: 0.5rem;
     }
 
@@ -193,6 +194,7 @@ dialog::backdrop {
     }
 
     #controls-mobile {
+        height: 10svh;
         width: 100%;
         margin: auto;
         display: flex;
