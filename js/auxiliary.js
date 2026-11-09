@@ -15,7 +15,7 @@ const pulses = {};
 document.addEventListener("keydown", e => { pulses[e.code] = true; });
 document.addEventListener("keyup", e => { pulses[e.code] = false; });
 
-function bindTouchControl(element, code) {
+function setMobilePulses(element, code) {
 
     if (!element) return;
 
@@ -34,11 +34,11 @@ function bindTouchControl(element, code) {
 
 }
 
-bindTouchControl(leftPulse, "KeyA");
-bindTouchControl(rightPulse, "KeyD");
-bindTouchControl(downPulse, "KeyS");
-bindTouchControl(upPulse, "KeyW");
-bindTouchControl(shotPulse, "Space");
+setMobilePulses(leftPulse, "KeyA");
+setMobilePulses(rightPulse, "KeyD");
+setMobilePulses(downPulse, "KeyS");
+setMobilePulses(upPulse, "KeyW");
+setMobilePulses(shotPulse, "Space");
 
 
 function areColliding(element1, element2) {
